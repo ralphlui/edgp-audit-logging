@@ -24,10 +24,10 @@ public class AWSConfig {
 
 	private static final Logger LOG = LogManager.getLogger(AWSConfig.class);
 
-	@Value("${cloud.aws.credentials.accessKey}")
+	@Value("${spring.cloud.aws.credentials.access-key}")
 	private String accessKey;
 
-	@Value("${cloud.aws.credentials.secretKey}")
+	@Value("${spring.cloud.aws.credentials.secret-key}")
 	private String secretKey;
 
 	@Value("${spring.cloud.aws.region.static}")
