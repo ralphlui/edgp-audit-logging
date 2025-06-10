@@ -25,7 +25,7 @@ public class EDGPAuditLoggingSecurityConfig {
 	
 	private static final String[] SECURED_URLs = { "/api/admin/**" };
 
-	@Value("${allowed.origin}")
+	@Value("${CLIENT_URL}")
 	private String allowedOrigin;
 
 	@Bean
