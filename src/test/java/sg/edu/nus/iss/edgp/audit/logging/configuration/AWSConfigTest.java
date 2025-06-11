@@ -10,7 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import io.awspring.cloud.sqs.config.SqsMessageListenerContainerFactory;
-
+import sg.edu.nus.iss.edgp.audit.logging.aws.AWSConfig;
 import software.amazon.awssdk.services.sqs.SqsAsyncClient;
 @ExtendWith(MockitoExtension.class)
 public class AWSConfigTest {

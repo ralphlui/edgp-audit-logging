@@ -1,4 +1,4 @@
-package sg.edu.nus.iss.edgp.audit.logging.configuration;
+package sg.edu.nus.iss.edgp.audit.logging.aws;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,10 +24,10 @@ public class AWSConfig {
 
 	private static final Logger LOG = LogManager.getLogger(AWSConfig.class);
 
-	@Value("${spring.cloud.aws.credentials.access-key}")
+	@Value("${cloud.aws.credentials.accessKey}")
 	private String accessKey;
 
-	@Value("${spring.cloud.aws.credentials.secret-key}")
+	@Value("${cloud.aws.credentials.secretKey}")
 	private String secretKey;
 
 	@Value("${spring.cloud.aws.region.static}")
