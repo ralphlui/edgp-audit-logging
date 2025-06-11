@@ -2,7 +2,6 @@ package sg.edu.nus.iss.edgp.audit.logging.aws.sqs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import sg.edu.nus.iss.edgp.audit.logging.aws.sqs.AwsSqsListener;
 import sg.edu.nus.iss.edgp.audit.logging.dto.AuditLogDTO;
 import sg.edu.nus.iss.edgp.audit.logging.service.AuditLogService;
 
@@ -13,7 +12,6 @@ import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.*;
-
 @ExtendWith(MockitoExtension.class)
 class AwsSqsListenerTest {
 

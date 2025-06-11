@@ -19,23 +19,18 @@ import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.test.context.ActiveProfiles;
 
-import sg.edu.nus.iss.edgp.audit.logging.controller.AuditLogController;
 import sg.edu.nus.iss.edgp.audit.logging.dto.AuditLogDTO;
 import sg.edu.nus.iss.edgp.audit.logging.entity.AuditLog;
 import sg.edu.nus.iss.edgp.audit.logging.repository.AuditLogRepository;
 import sg.edu.nus.iss.edgp.audit.logging.service.impl.AuditLogServiceImpl;
 import sg.edu.nus.iss.edgp.audit.logging.utility.DTOMapper;
 
-
 @ExtendWith(MockitoExtension.class)
-@ActiveProfiles("test")
 public class AuditLogServiceTest {
 
 	@Mock

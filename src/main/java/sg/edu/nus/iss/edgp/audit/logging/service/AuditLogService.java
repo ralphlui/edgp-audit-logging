@@ -10,7 +10,9 @@ import sg.edu.nus.iss.edgp.audit.logging.dto.AuditLogDTO;
 
 public interface AuditLogService {
 
+
 	void executeAuditLog(AuditLogDTO auditLogDTO);
+
 
 	Map<Long, List<AuditLogDTO>> retrieveAllAuditLogs(Pageable pageable);
 

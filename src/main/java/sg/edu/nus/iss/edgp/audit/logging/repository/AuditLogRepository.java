@@ -13,6 +13,7 @@ import sg.edu.nus.iss.edgp.audit.logging.entity.AuditLog;
 @Repository
 public interface AuditLogRepository extends JpaRepository<AuditLog, Integer> {
 
+	//Page<AuditLog> retrieveAuditLogWith(Pageable pageable);
 	
 	@Query("SELECT auditLogData FROM AuditLog auditLogData")
     Page<AuditLog> retrieveAuditLogWith(Pageable pageable);

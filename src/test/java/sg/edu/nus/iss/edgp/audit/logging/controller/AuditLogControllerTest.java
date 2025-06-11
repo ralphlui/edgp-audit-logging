@@ -23,12 +23,10 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -38,19 +36,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import sg.edu.nus.iss.edgp.audit.logging.dto.AuditLogDTO;
 import sg.edu.nus.iss.edgp.audit.logging.entity.AuditLog;
-import sg.edu.nus.iss.edgp.audit.logging.service.impl.AuditLogServiceImpl;
+import sg.edu.nus.iss.edgp.audit.logging.service.AuditLogService;
 import sg.edu.nus.iss.edgp.audit.logging.utility.DTOMapper;
-
 
 @WebMvcTest(AuditLogController.class)
 @AutoConfigureMockMvc(addFilters = false)
-class AuditLogControllerTests {
+public class AuditLogControllerTest {
 	
 	@Autowired
 	private MockMvc mockMvc;
 	
 	@MockitoBean
-	private AuditLogServiceImpl auditLogService;
+	private AuditLogService auditLogService;
 	
 	private static List<AuditLogDTO> mockAuditLog = new ArrayList<>();
 	
